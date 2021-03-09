@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Живая еда</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="wrap">
+                <img src="/img/top-logo.png" alt="logo" class="top-logo" />
+
+                <div class="navigation">
+                    <div class="navigation__top-menu">
+                        <div class="navigation__top-menu__left">
+                            <a href="#" class="link yellow-button">All products</a>
+                        </div>
+                        <div class="navigation__top-menu__right">
+                            <label for="toggle">
+                                <div class="navigation__top-menu__right_toggle"></div>
+                            </label>
+                            <input type="checkbox" id="toggle" />
+                            <nav>
+                                <ul class="navigation__top-menu__right_menu-list">
+                                    <li class="navigation__top-menu__right_menu-item">
+                                        <a href="#" class="link navigation__top-menu__right_menu-link">
+                                            <span>
+                                                <svg>
+                                                    <use Xlink:href="/svg/icons.svg#shipping-icon"></use>
+                                                </svg>
+                                            </span>
+                                            <span>Shipping</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__top-menu__right_menu-item">
+                                        <a href="#" class="link navigation__top-menu__right_menu-link">
+                                            <span>
+                                                <svg>
+                                                    <use Xlink:href="/svg/icons.svg#returns-icon"></use>
+                                                </svg>
+                                            </span>
+                                            <span>Returns</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__top-menu__right_menu-item">
+                                        <a href="" class="link navigation__top-menu__right_menu-link">
+                                            <span>
+                                                <svg>
+                                                    <use Xlink:href="/svg/icons.svg#payments-icon"></use>
+                                                </svg>
+                                            </span>
+                                            <span>Payments</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="navigation__top-menu__right_menu-item">
+                                        <a href="" class="link navigation__top-menu__right_menu-link">
+                                            <span>
+                                                <svg>
+                                                    <use Xlink:href="/svg/icons.svg#customs-icon"></use>
+                                                </svg>
+                                            </span>
+                                            <span>Customs</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__top-menu__right_menu-item">
+                                        <a href="" class="link navigation__top-menu__right_menu-link">
+                                            <span>
+                                                <svg>
+                                                    <use Xlink:href="/svg/icons.svg#warranties-icon"></use>
+                                                </svg>
+                                            </span>
+                                            <span>Warranties</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__top-menu__right_menu-item">
+                                        <a href="" class="link navigation__top-menu__right_menu-link">
+                                            <span>
+                                                <svg>
+                                                    <use Xlink:href="/svg/icons.svg#wholesale-icon"></use>
+                                                </svg>
+                                            </span>
+                                            <span>Wholesale</span>
+                                        </a>
+                                    </li>
+                                </ul><!--navigation__top-menu__right_menu-list-->
+                            </nav>
+                        </div><!--navigation__top-menu__right-->
+                    </div><!--navigation__top-menu-->
+                    <div class="navigation__cat-menu">
+                        <ul class="navigation__cat-list">
+                            <div class="navigation__cat-mobile">
+                                <span>
+                                    <svg>
+                                        <use Xlink:href="/svg/icons.svg#arrow-down-icon"></use>
+                                    </svg>
+                                </span>
+                                Choose category
+                                <span>
+                                    <svg>
+                                        <use Xlink:href="/svg/icons.svg#arrow-down-icon"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <li class="navigation__cat-item">
+                                <a href="#" class="navigation__cat-link link">Category 1</a>
+                            </li>
+                            <li class="navigation__cat-item">
+                                <a href="#" class="navigation__cat-link link">Category 2</a>
+                            </li>
+                            <li class="navigation__cat-item">
+                                <a href="#" class="navigation__cat-link link">Category 3</a>
+                            </li>
+                            <li class="navigation__cat-item">
+                                <a href="#" class="navigation__cat-link link">Category 4</a>
+                            </li>
+                            <li class="navigation__cat-item">
+                                <a href="#" class="navigation__cat-link link">Category 5</a>
+                            </li>
+                            <li class="navigation__cat-item">
+                                <a href="#" class="navigation__cat-link link">Category 6</a>
+                            </li>
+                        </ul> <!--navigation__cat-list-->
+                    </div> <!--navigation__cat-menu-->
+                </div><!--.navigation-->
+            </div><!--.wrap-->
+        </div><!--.header-->
+    </header><!--header-->
+
+    <section class="content">
+        <div class="wrap">
+            <div class="box">
+                <div class="product">
+                    <div class="product__gallery">
+                        <div class="pic__gallery">
+                            <div class="pic__gallery-padding">
+                                <div class="pic__lg-default">
+                                </div>
+
+                                <ul class="pic__sm-box">
+                                    <li class="pic__sm-item">
+                                        <input id="pic1" type="radio" checked name="picset" class="pic-label" />
+                                        <label for="pic1">
+                                            <img src="/img/pic1.png" alt="" class="pic__sm" />
+                                            <div>
+                                                <img src="/img/pic1.png" alt="" class="pic__lg" />
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="pic__sm-item">
+                                        <input id="pic2" type="radio" name="picset" class="pic-label" />
+                                        <label for="pic2">
+                                            <img src="/img/pic2.png" alt="" class="pic__sm" />
+                                            <div>
+                                                <img src="/img/pic2.png" alt="" class="pic__lg" />
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="pic__sm-item">
+                                        <input id="pic3" type="radio" name="picset" class="pic-label" />
+                                        <label for="pic3">
+                                            <img src="/img/pic3.png" alt="" class="pic__sm" />
+                                            <div>
+                                                <img src="/img/pic3.png" alt="" class="pic__lg" />
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="pic__sm-item">
+                                        <input id="pic4" type="radio" name="picset" class="pic-label" />
+                                        <label for="pic4">
+                                            <img src="/img/pic4.png" alt="" class="pic__sm" />
+                                            <div>
+                                                <img src="/img/pic4.png" alt="" class="pic__lg" />
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="pic__sm-item">
+                                        <input id="pic5" type="radio" name="picset" class="pic-label" />
+                                        <label for="pic5">
+                                            <img src="/img/pic5.png" alt="" class="pic__sm" />
+                                            <div>
+                                                <img src="/img/pic5.png" alt="" class="pic__lg" />
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul> <!--pic__sm-box-->
+                            </div> <!--pic__gallery-padding-->
+                        </div> <!--pic__gallery-->
+                    </div> <!--product__gallery-->
+                    <div class="product__details">
+                        <h1 class="product__title">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </h1>
+                        <hr />
+                        <div class="product__description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+                        </div> <!--product__description-->
+                        <div class="product__weight">
+                            <p><span>Weight: </span>50g</p>
+                        </div>
+                    </div> <!--product__details-->
+                </div> <!--.product-->
+
+                <hr class="box-separator" />
+
+                <div class="feature-product">
+                    <h2>You may also like</h2>
+                    <div class="carusel">
+                        <div class="carusel__card">
+                            <div class="carusel__card__img">
+                                <img src="/img/feature-product-1.png" alt="feature-product-1" />
+                            </div>
+                            <div class="carusel__card__title">
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do
+                                </h3>
+                            </div>
+                            <div class="carusel__card__price">16.50$</div>
+                            <div class="carusel__card__btn">
+                                <a href="#" class="link button grey-button">Take a look</a>
+                            </div>
+                        </div> <!--carusel__card-->
+                        <div class="carusel__card">
+                            <div class="carusel__card__img">
+                                <img src="/img/feature-product-2.png" alt="feature-product-2" />
+                            </div>
+                            <div class="carusel__card__title">
+                                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                            </div>
+                            <div class="carusel__card__price">102.99$</div>
+                            <div class="carusel__card__btn">
+                                <a href="#" class="link button grey-button">Take a look</a>
+                            </div>
+                        </div> <!--carusel__card-->
+                        <div class="carusel__card">
+                            <div class="carusel__card__img">
+                                <img src="/img/feature-product-3.png" alt="feature-product-3" />
+                            </div>
+                            <div class="carusel__card__title">
+                                <h3>Lorem ipsum dolor</h3>
+                            </div>
+                            <div class="carusel__card__price">2$</div>
+                            <div class="carusel__card__btn">
+                                <a href="#" class="link button grey-button">Take a look</a>
+                            </div>
+                        </div> <!--carusel__card-->
+                    </div> <!--carusel-->
+                </div> <!--feature-product-->
+            </div> <!--.box-->
+
+            <div class="box">
+                <div class="promo">
+                    <div class="promo__content">
+                        <img src="/img/logo.png" alt="1" class="promo__pic-big" />
+                        <div class="promo__pic-small__box">
+                            <img src="/img/granat-choco.png" alt="1" class="promo__pic-small" />
+                            <img src="/img/choco.png" alt="1" class="promo__pic-small" />
+                            <img src="/img/Logo_Chips.png" alt="1" class="promo__pic-small" />
+                        </div> <!--promo__pic-small__box-->
+
+                        <a href="#" class="button link yellow-button">All products</a>
+                    </div> <!--promo__content-->
+                </div> <!--promo-->
+
+                <hr class="box-separator" />
+
+                <div class="feature-product">
+                    <h2>You may also like</h2>
+                    <div class="carusel">
+                        <div class="carusel__card">
+                            <div class="carusel__card__img">
+                                <img src="/img/feature-product-1.png" alt="feature-product-1" />
+                            </div>
+                            <div class="carusel__card__title">
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do
+                                </h3>
+                            </div>
+                            <div class="carusel__card__price">16.50$</div>
+                            <div class="carusel__card__btn">
+                                <a href="#" class="link button grey-button">Take a look</a>
+                            </div>
+                        </div> <!--carusel__card-->
+                        <div class="carusel__card">
+                            <div class="carusel__card__img">
+                                <img src="/img/feature-product-2.png" alt="feature-product-2" />
+                            </div>
+                            <div class="carusel__card__title">
+                                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                            </div>
+                            <div class="carusel__card__price">102.99$</div>
+                            <div class="carusel__card__btn">
+                                <a href="#" class="link button grey-button">Take a look</a>
+                            </div>
+                        </div> <!--carusel__card-->
+                        <div class="carusel__card">
+                            <div class="carusel__card__img">
+                                <img src="/img/feature-product-3.png" alt="feature-product-3" />
+                            </div>
+                            <div class="carusel__card__title">
+                                <h3>Lorem ipsum dolor</h3>
+                            </div>
+                            <div class="carusel__card__price">2$</div>
+                            <div class="carusel__card__btn">
+                                <a href="#" class="link button grey-button">Take a look</a>
+                            </div>
+                        </div> <!--carusel__card-->
+                    </div> <!--carusel-->
+                </div> <!--feature-product-->
+
+                <div class="about-us">
+                    <div class="about-us__box">
+                        <h2>About us</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p> 
+                    </div> <!--about-us__box-->
+                </div> <!--about-us-->
+
+                <div class="our-polices__box">
+                    <h2 class="our-polices-title">Our polices</h2>
+
+                    <div class="tabs__container">
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <input id="tabtop1" type="radio" name="tabset" checked class="tabs__input" />
+                                <div class="tabs__top-holder">
+                                    <label for="tabtop1">
+                                        <span class="tabs__icon">
+                                            <svg>
+                                                <use Xlink:href="/svg/icons.svg#shipping-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tabs__title">Shipping</span>
+                                    </label>
+
+                                    <div class="tabs__arrow-border"></div>
+                                    <div class="tabs__bubble-arrow"></div>
+                                </div> <!--tabs__top-holder-->
+                                <div class="tabs__summary">
+                                    <p>
+                                        ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum. Lorem ipsum
+                                        dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div> <!--tabs__summary-->
+                            </li> <!--tabs__item-->
+                            <li class="tabs__item">
+                                <input id="tabtop2" type="radio" name="tabset" class="tabs__input" />
+                                <div class="tabs__top-holder">
+                                    <label for="tabtop2">
+                                        <span class="tabs__icon">
+                                            <svg>
+                                                <use Xlink:href="/svg/icons.svg#returns-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tabs__title">Returns</span>
+                                    </label>
+
+                                    <div class="tabs__arrow-border"></div>
+                                    <div class="tabs__bubble-arrow"></div>
+                                </div> <!--tabs__top-holder-->
+                                <div class="tabs__summary">
+                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum
+                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id
+                                    est laborum.
+                                </div> <!--tabs__summary-->
+                            </li> <!--tabs__item-->
+                            <li class="tabs__item">
+                                <input id="tabtop3" type="radio" name="tabset" class="tabs__input" />
+                                <div class="tabs__top-holder">
+                                    <label for="tabtop3">
+                                        <span class="tabs__icon">
+                                            <svg>
+                                                <use Xlink:href="/svg/icons.svg#payments-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tabs__title">Payments</span>
+                                    </label>
+
+                                    <div class="tabs__arrow-border"></div>
+                                    <div class="tabs__bubble-arrow"></div>
+                                </div> <!--tabs__top-holder-->
+                                <div class="tabs__summary">
+                                    ctetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo consequat. Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit anim id est laborum. Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut
+                                </div> <!--tabs__summary-->
+                            </li> <!--tabs__item-->
+
+                            <li class="tabs__devider"></li>
+
+                            <li class="tabs__item">
+                                <input id="tabtop4" type="radio" name="tabset" class="tabs__input" />
+                                <div class="tabs__top-holder">
+                                    <label for="tabtop4">
+                                        <span class="tabs__icon">
+                                            <svg>
+                                                <use Xlink:href="/svg/icons.svg#customs-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tabs__title">Customs</span>
+                                    </label>
+
+                                    <div class="tabs__arrow-border"></div>
+                                    <div class="tabs__bubble-arrow"></div>
+                                </div> <!--tabs__top-holder-->
+                                <div class="tabs__summary">
+                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum
+                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id
+                                    est laborum.
+                                </div> <!--tabs__summary-->
+                            </li> <!--tabs__item-->
+                            <li class="tabs__item">
+                                <input id="tabtop5" type="radio" name="tabset" class="tabs__input" />
+                                <div class="tabs__top-holder">
+                                    <label for="tabtop5">
+                                        <span class="tabs__icon">
+                                            <svg>
+                                                <use Xlink:href="/svg/icons.svg#warranties-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tabs__title">Our Warranties</span>
+                                    </label>
+
+                                    <div class="tabs__arrow-border"></div>
+                                    <div class="tabs__bubble-arrow"></div>
+                                </div> <!--tabs__top-holder-->
+                                <div class="tabs__summary">
+                                    liqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprehenderit in voluptate velit
+                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                    occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                                    amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et do
+                                </div> <!--tabs__summary-->
+                            </li> <!--tabs__item-->
+                            <li class="tabs__item">
+                                <input id="tabtop6" type="radio" name="tabset" class="tabs__input" />
+                                <div class="tabs__top-holder">
+                                    <label for="tabtop6">
+                                        <span class="tabs__icon">
+                                            <svg>
+                                                <use Xlink:href="/svg/icons.svg#wholesale-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tabs__title">Wholesale</span>
+                                    </label>
+
+                                    <div class="tabs__arrow-border"></div>
+                                    <div class="tabs__bubble-arrow"></div>
+                                </div> <!--tabs__top-holder-->
+                                <div class="tabs__summary">
+                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum
+                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id
+                                    est laborum.
+                                </div> <!--tabs__summary-->
+                            </li> <!--tabs__item-->
+                        </ul> <!--tabs__list-->
+                    </div> <!--tabs__container-->
+                </div> <!--our-polices__box-->
+            </div> <!--box-->
+        </div> <!--wrap-->
+    </section> <!--content-->
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="box">
+                <div class="footer__box">
+                    <div class="footer__box__content">
+                        <span class="">
+                            <p>Payments systems:</p>
+                            <img src="/img/payment-systems.png" alt="payment-systems" class="payment-systems" />
+                        </span>
+                    </div> <!--footer__box__content-->
+                    <p>Copyright "Jivaya eda" inc.</p>
+                    <p>Powered by Expand Solutions</p>
+                </div><!--footer__box-->
+            </div> <!--.box-->
+        </div> <!--wrap-->
+    </footer> 
+</body>
+
+</html>
