@@ -1,0 +1,343 @@
+/// buttons ///
+///////////////
+
+// yellow button
+.yellow-button,
+.yellow-button:active,
+.yellow-button:visited,
+.yellow-button:focus {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff602;
+  border-radius: 3rem;
+  padding: 1.5rem 4rem;
+}
+
+// grey button
+.grey-button,
+.grey-button:active,
+.grey-button:visited,
+.grey-button:focus {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #D7D7D7;
+  border-radius: 3rem;
+  padding: 1.5rem 4rem;
+
+}
+
+/// CARUSEL ////
+/////////////////
+
+// carusel container
+.carusel {
+  margin-top: 5rem;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width:$tablet-land) {
+      margin: 10rem auto 0 auto;
+  }
+
+  // carusel card container
+  &__card {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 2rem 4rem;
+    margin:1.5rem;
+    height: 55rem;
+
+    transition: all 0.2s; // start animation for :hover {see below)
+
+
+    @media only screen and (max-width:$tablet-land) {
+      padding:2rem 1rem 4rem;
+      margin-bottom: 2rem;
+    }
+
+   &__img {
+      margin-bottom: 4rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+    }
+
+    &__price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #8c8c8c;
+      margin-bottom: 4rem;
+    }
+  } // .carusel__card container
+
+  
+  
+  // card animation
+  // adding shadow on :hover
+  &__card:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); // "raise up" card 
+  }
+
+  // button turn from grey to yellow on hover
+  &__card:hover .carusel__card__btn a {
+    background-color: #fff602;
+  }
+} //.carusel
+
+//  OUR POLICIES TABS //
+//////////////////////////
+
+// our polices container
+.our-polices__box {
+  padding: 5rem 1rem;
+}
+
+.tabs {
+  &__container { // .tabs__container for tabs and summary text fields (everything basically)
+    height: 45rem; // original height
+
+    // for mobile increase height to fit summary text in absolute position container
+    @media only screen and (max-width:$tablet-land) {
+      height:70em;
+    }
+    // smaller displays increase height even more
+    @media only screen and (max-width:$phone-land) {
+      height:100em;
+    }
+  }
+
+
+  // container which has actual tabs inside
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    position: relative;
+
+    // ability to wrap tabs when display too narrow
+    @media only screen and (max-width:$tablet-land) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+
+  }
+  // added "devider" div before tabs which we want to go to new row
+  // this divider suppose to take entire width so all divs from after will have to go to new row
+  // this effect is built with flex:1; property
+  &__devider {
+    display:none; // hidden originaly
+
+    // appear on mobile only
+    @media only screen and (max-width:$tablet-land) {
+      display: flex;
+      flex:0 0 100%;
+    }
+  } // .tabs__devider
+
+  // radio button to choose which tab is currently active
+  &__input {
+    display: none; // hidden originaly
+
+    // when radio button checked display text summary field
+    &:checked ~ div {
+      display: block;
+    }
+
+    // when radio button checked display arrow pointer effect (arrow made of 2 blocks one on another with high border-top
+    &:checked ~ div div {
+      display: block;
+
+      // hide arrow pointer on mobile
+      @media only screen and (max-width:$tablet-land) {
+        display: none;
+      }
+    }
+  } // .tabs__input
+
+  // container for label and arrow
+  &__top-holder {
+    position: relative;
+  }
+
+
+  // container for icon and policy title + rules input
+  &__top-holder label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+
+  //building arrow pointer
+////////////////////////////
+  &__arrow-border {
+    border-color: transparent transparent #e2e2e2;
+    border-style: solid;
+    border-width: 2.5rem;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 11.1rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: none;
+}
+
+  &__bubble-arrow {
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    border-width: 2.5rem;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 11.3rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: none;
+  }
+  //////////////////////////
+// END building arrow pointer
+
+
+  // svg icon container
+  &__icon {
+    margin-bottom: 2rem;
+  }
+
+
+  &__icon svg {
+    fill: #0055d3;
+    height: 6.2rem;
+    width: 6.5rem;
+  }
+
+  // text summary
+  // each tab has its own sammary block, which originaly hidden
+  //gets revealed when input :checked
+  // takes full width of tab__list
+  &__summary {
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 2;
+    min-height: 25rem;
+    border: 1px solid #e2e2e2;
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    display: none;
+
+    // on mobile, when tabs have in 2 rows we increase distance from the top
+    @media only screen and (max-width:$tablet-land) {
+      top:26rem;
+    }
+  }
+
+  
+} // .tabs
+
+//  END OUR POLICIES TABS //
+//////////////////////////
+
+//  gallery //
+//////////////////////////
+
+.pic {
+
+  // gallary container
+  &__gallery {
+    padding: 3rem;
+    width: 100%;
+
+    // big pic container
+    &-padding {
+      position: relative;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: end;
+    }
+  } // .pic__gallery
+
+  // default big pic
+  &__lg-default {
+    height:40vh;
+  }
+
+  // rest of big pics
+  // oroginally hidden
+  // get seen only when readio input is checked
+  // when input checked we can see only that picture which inside same container with input
+  &__lg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 71%;
+    background-color: #fff;
+    max-width: 100%;
+  }
+
+  // small pics container
+  &__sm-box {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+  }
+
+  // styling each small pic
+  &__sm {
+    max-width: 8rem;
+    max-height: 8rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      padding-right: 3rem;
+    }
+
+    // radio input 
+    // originally hidden
+    &-item input {
+      display: none;
+    }
+
+    // hover effect for each small pic
+    &-item &:hover {
+      opacity: 0.5;
+
+    }
+  }
+} // .pic
+
+// picture select animation
+// when input gets checked we see big pic which relative to the checked input
+.pic-label:checked ~ label .pic__lg {
+  display: block;
+}
+
+//  END gallery //
+//////////////////////////

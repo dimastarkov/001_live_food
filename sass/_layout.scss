@@ -1,0 +1,586 @@
+// site wrap //
+///////////////
+// create borders from right and left
+.wrap {
+  max-width: 103rem; // 1030 px
+  margin: 0 auto;
+}
+
+///////////////////
+// END site wrap //
+
+
+
+// site box //
+///////////////
+// contaoner with radius cornes for every section and header abd footer
+.box {
+  width: 100%;
+  min-height: 20rem;
+  display: inline-block;
+  box-shadow: 0 0rem 3rem rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  margin-bottom: 6rem;
+  overflow: hidden;
+
+  // on mobile remove radius corners
+  @media only screen and (max-width:$tablet-port) {
+    border-radius: unset;
+  }
+}
+
+// box for footer
+.footer .box {
+  // remove bottom margin for footer only
+  @media only screen and (max-width:$tablet-port) {
+    margin-bottom: 0;
+  }
+}
+
+// END site box //
+//////////////////
+
+
+
+/// MAIN LOGO ///
+/////////////////
+.top-logo {
+  display: block;
+  width: 39.5rem;
+  margin: 5rem auto 0;
+
+  @media only screen and (max-width:$tablet-land) {
+    margin: 2rem auto 0;
+  }
+
+  @media only screen and (max-width:$tablet-port) {
+    width: 30rem;
+  }
+}
+
+/////////////////////
+/// END MAIN LOGO ///
+
+
+
+
+
+
+///// HEADER //////
+///////////////////
+.header {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+// wrap for both header menus
+.navigation {
+  min-height: 19.3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(rgba(0, 85, 211, 0.9) 0%,
+      rgba(0, 85, 211, 0.9) 100%),
+    url("/img/header_background.png");
+  background-size: 110%;
+  border: 1px solid #0055d3;
+  border-radius: 1.5rem;
+  overflow: hidden;
+
+  @media only screen and (max-width:$tablet-port) {
+    border-radius: unset;
+
+  }
+
+
+//top menu on blue background
+  &__top-menu {
+    display: flex;
+    flex: 1 0 66%;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    align-items: center;
+    position: relative;
+
+    @media only screen and (max-width:$tablet-land) {
+      min-height: 13.5rem;
+    }
+
+    @media only screen and (max-width:$tablet-port) {
+      align-items: start;
+      flex-direction: column;
+      display: block;
+      text-align: center;
+    }
+
+    @media only screen and (max-width:$phone-port) {
+      display: flex;
+    }
+
+// left part of top blue menu
+    &__left {
+
+      @media only screen and (max-width:$tablet-port) {
+        margin-top: 2rem;
+      }
+
+      & a {
+        @media only screen and (max-width:$tablet-port) {
+          width: 30rem;
+        }
+
+        @media only screen and (max-width:$phone-lg) {
+          width: auto;
+        }
+      }
+    } //__left
+
+
+
+// right part of top blue menu
+// .navigation__top-menu__right
+    &__right {
+      flex: 0 1 60%;
+
+      
+      // checkbox top toggle menu animation
+      & input {
+        display: none; //unvisible on descktop
+        
+        
+        
+        // makes top menu <ul> visible if checkbox is checked
+        // can get checked on mobile only, when _toggle becomes visible (see @media query below)
+        &:checked ~ nav ul {
+          display: inline-block;
+
+          
+          
+          // for mobile, when _toggle checked
+          & li {
+            margin: 2rem 0;
+          }
+        }
+      }
+      // END checkbox top toggle menu animation
+
+
+      // container for "hamburger" icon
+      & label {
+        padding: 30px;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+      }
+
+
+      // "hamburger" icon
+      // visible on small displays ONLY (see @media query below)
+      &_toggle {
+        display: none; // originally made hidden
+        background-color: #fff;
+        height: 2px;
+        width: 30px;
+    
+        &::before {
+          content: "";
+          display: block;
+          background-color: #fff;
+          height: 2px;
+          width: 30px;
+          transform: translateY(-8px);
+    
+        }
+    
+        &::after {
+          content: "";
+          display: block;
+          background-color: #fff;
+          height: 2px;
+          width: 30px;
+          transform: translateY(6px);
+    
+        }
+        // appear toggle "hamburger" icon
+        @media only screen and (max-width:$tablet-port) {
+          display: inline-block;
+        }
+      }
+
+
+      // right top menu list 
+      &_menu-list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        font-size: 1.3rem;
+    
+        // hide top-menu list, when toggle appears on mobile
+        @media only screen and (max-width:$tablet-port) {
+          display: none;
+          margin-top: 2rem;
+          align-items: center;
+        }
+      } // .navigation__top-menu__right_menu-list
+    
+
+      // menu link container of icon and link text
+      // make icon text placed one on another 
+      &_menu-link,
+      &_menu-link:visited,
+      &_menu-link:active,
+      &_menu-link:focus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        padding: 0 2rem;
+    
+        // place icon and text next to each other in a row
+        @media only screen and (max-width:$tablet-port) {
+          flex-direction: row;
+          font-size: 2rem;
+          
+          // each menu item has a margin except the last one
+          & span:last-child {
+            margin-left: 2rem;
+          }
+    
+        }
+      }
+    
+      //design menu icon
+      &_menu-link span svg {
+        height: 3.6rem;
+        width: 3.6rem;
+        fill: white;
+        margin-bottom: 1rem;
+      }
+
+
+    } //__right
+  } //__top-menu
+
+  
+
+ 
+// container for category menu in the header
+// it takes 34% of the header height, no shrinking
+  &__cat-menu {
+    flex: 1 0 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+// on mobile view has set hight
+    @media only screen and (max-width:$tablet-land) {
+      min-height: 6rem;
+    }
+  }
+
+
+
+  &__cat-list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  //animation of category menu on mobile view
+  // when hover the entire category menu, its items change own display from flex to block (from being in a row to column view
+  @media only screen and (max-width:$tablet-port) {
+
+    &__cat-list:hover > &__cat-item,
+    &__cat-list:hover {
+      display: block; // originally cat items were display: none (see @media query below)
+      }
+    }
+
+// each cat item
+&__cat-item {
+    flex: 1;
+    padding: 0;
+
+//making sure that cat items hiddend on mobile
+    @media only screen and (max-width:$tablet-port) {
+      display: none;
+      margin: 2.2rem;
+    }
+  }
+
+  &__cat-link {
+    padding: 2rem;
+  }
+
+
+  // "chooge category" item to view cat items on mobile whe hover menu
+  &__cat-mobile {
+    display: none; // originally is hidden
+
+    //styling arrows down for "choose category" menu
+    & svg {
+      height: 2rem;
+      width: 1.4rem;
+      fill: #0055d3;
+      margin: -.5rem 1rem;
+      display: inline-block;
+    }
+
+    // making "choose categoty" visible on mobile
+    @media only screen and (max-width:$tablet-port) {
+      display: block;
+      margin: 2.2rem;
+    }
+
+  }
+}//.navigation
+
+
+////// END HEADER /////
+///////////////////////
+
+////// PRODUCT DETAILS ////////////
+///////////////////////////////////
+
+
+// product container of galary and product description
+.product {
+  display: flex;
+  margin-bottom: 4rem;
+  padding: 5rem;
+
+  // on mobile gallary gets on top of description
+  @media only screen and (max-width:$tablet-land) {
+    flex-direction: column;
+  }
+
+  &__gallery {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  // product information
+  &__details {
+    flex: 1;
+  }
+
+  //product description
+  &__description {
+    margin: 2rem 0;
+    font-size: 1.45rem;
+    color: #383838;
+    line-height: 2.35;
+  }
+
+  // product weight
+  &__weight {
+    font-size: 1.45rem;
+    line-height: 2.35;
+    color: #383838;
+
+    & span {
+      font-weight: 700;
+    }
+  } // .product__weight
+} // .product
+
+
+
+
+
+// FEATURE PRODUCT ////
+///////////////////////////
+
+// feature product container
+.feature-product {
+  margin: 4rem 0;
+  padding: 5rem;
+
+  // reduce padding on mobile
+  @media only screen and (max-width:$tablet-land) {
+    padding: 1rem;
+  }
+
+  // feature product title
+  & h2 {
+    text-align: center;
+  }
+} // .feature__product
+
+// END FEATURE PRODUCT ////
+///////////////////////////
+
+
+// PROMO ////
+///////////////////////////
+
+// promo section container
+.promo {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 42.2rem;
+  background-image: url("/img/promo-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  //promo content container holds content at the left side of the section
+  // and makes all its contents in column order 
+  &__content {
+    flex: 0 0 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    // add padding on mobile
+    @media only screen and (max-width:$tablet-land) {
+      padding: 4rem;
+    }
+  }
+
+
+  // 1st row of content
+  &__pic-big {
+    flex: 1;
+
+    @media only screen and (max-width:$tablet-land) {
+      max-width: 37.5rem;
+    }
+  }
+// 2nd row of content
+// small pics inside of this container
+  &__pic-small__box {
+    flex: 1;
+    margin-bottom: 4rem;
+  }
+
+  &__pic-small {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+} // .promo section
+
+// END PROMO ////
+///////////////////////////
+
+// ABOUT US ////
+///////////////////////////
+
+// about us section container
+.about-us {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 48rem;
+  background: url(/img/yellow-waves.png), #0055d3;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+
+  // on mobile remove yellow waves
+  @media only screen and (max-width:$tablet-land) {
+    background: #0055d3;
+    height: unset;
+  }
+
+
+  // container for content
+  //takes width: 50% of section
+  &__box {
+    display: inline-block;
+    width: 50%;
+    padding: 5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 2.35;
+
+    // takes full width on mibile
+    @media only screen and (max-width:$tablet-land) {
+      width: 100%;
+      font-size: 1.45rem;
+    }
+
+    & h2 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+  }
+} // .about-us
+
+// END ABOUT US ////
+///////////////////////////
+
+// OUR POLICES ////
+///////////////////////////
+
+// our polices section container
+.our-polices__box {
+  margin: 5rem 0 0;
+
+  & h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}
+
+// END OUR POLICES ////
+///////////////////////////
+
+/// FOOTER ////
+////////////////
+
+
+
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5rem 0;
+  font-size: 1.4rem;
+  color: #000;
+
+  & p {
+    line-height: 2.5;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+
+    & span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width:$phone-md) {
+        flex-direction: column;
+      }
+
+      & p {
+        margin-right: 3rem;
+        font-size: 1.4rem;
+        color: #979797;
+      }
+    }
+  }
+}
